@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyLibMonoService } from 'my-lib-mono';
+import { MyLibService } from 'my-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,11 @@ import { MyLibMonoService } from 'my-lib-mono';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'client 2 (multirepo)';
+  title = 'multirepo-client2';
   valueFromLib!: number;
-  constructor(private myLibMonoService: MyLibMonoService) {}
+  constructor(private myLibService: MyLibService) {}
 
   ngOnInit(): void {
-    this.valueFromLib = this.myLibMonoService.getValueFromLib();
+    this.valueFromLib = this.myLibService.getValueFromLib();
   }
 }

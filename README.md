@@ -1,8 +1,8 @@
-# Breadcrumbsangular13-lib-test
+# angular13-lib-test-root
 To test how you can develop Angular 13 library and application.
 
 ### Project structure
-* ROOT: only to provide Angular 13 CLI
+* ROOT: project only to provide Angular 13 CLI
   * ***monorepo***: single project tree for app + lib
   * ***multirepo***: 2 separate projects for app + lib
 
@@ -15,5 +15,9 @@ To test how you can develop Angular 13 library and application.
 ### Monorepo
 * go to monorepo
 * `npm i`
-* `ng build my-lib-mono`
-* 
+* `ng build my-lib-mono --watch`
+* `ng serve`
+
+### Multirepo
+* go to multirepo
+* `ng serve`

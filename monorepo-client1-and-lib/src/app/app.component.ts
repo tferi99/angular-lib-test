@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { MyLibMonoService } from 'my-lib-mono';
+import { Component } from '@angular/core';
+import { MyLibService } from 'my-lib';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'client 1 (monorepo)';
+export class AppComponent {
+  title = 'monorepo-client1';
   valueFromLib!: number;
-  constructor(private myLibMonoService: MyLibMonoService) {}
+  constructor(private myLibMonoService: MyLibService) {}
 
   ngOnInit(): void {
     this.valueFromLib = this.myLibMonoService.getValueFromLib();

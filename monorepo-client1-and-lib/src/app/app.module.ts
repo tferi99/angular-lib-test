@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyLibMonoModule } from 'my-lib-mono';
+import { MyLibModule } from 'my-lib';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { MyLibMonoModule } from 'my-lib-mono';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MyLibMonoModule
+    MyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
