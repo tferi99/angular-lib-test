@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'lib-my-lib-mono',
   template: `
       <table border="15">
-        <tr><td>my-lib-mono v3</td></tr>
+        <tr><td>my-lib-mono v4</td></tr>
       </table>
   `,
   styles: [

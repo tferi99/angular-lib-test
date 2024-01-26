@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-for-my-lib": {
+    "app-for-my-lib-mono": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-for-my-lib",
+            "outputPath": "dist/app-for-my-lib-mono",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app-for-my-lib:build:production"
+              "browserTarget": "app-for-my-lib-mono:build:production"
             },
             "development": {
-              "browserTarget": "app-for-my-lib:build:development"
+              "browserTarget": "app-for-my-lib-mono:build:development",
+              "port": 4201
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-for-my-lib:build"
+            "browserTarget": "app-for-my-lib-mono:build"
           }
         },
         "test": {
@@ -105,7 +106,38 @@
           }
         }
       }
+    },
+    "my-lib-mono": {
+      "projectType": "library",
+      "root": "projects/my-lib-mono",
+      "sourceRoot": "projects/my-lib-mono/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/my-lib-mono/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/my-lib-mono/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/my-lib-mono/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-lib-mono/src/test.ts",
+            "tsConfig": "projects/my-lib-mono/tsconfig.spec.json",
+            "karmaConfig": "projects/my-lib-mono/karma.conf.js"
+          }
+        }
+      }
     }
   },
-  "defaultProject": "app-for-my-lib"
+  "defaultProject": "app-for-my-lib-mono"
 }

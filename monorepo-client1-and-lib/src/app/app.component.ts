@@ -7,7 +7,7 @@ import { MyLibMonoService } from 'my-lib-mono';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app-for-my-lib-mono';
+  title = 'client 1 (monorepo)';
   valueFromLib!: number;
   constructor(private myLibMonoService: MyLibMonoService) {}
 
