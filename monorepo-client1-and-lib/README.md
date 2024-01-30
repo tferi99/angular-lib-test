@@ -8,3 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 > NOTE: if you change lib it will be propagated to app automatically.
 
+## Link ##
+ * link lib for external consumers `npm run link`
+
+> NOTE: `npm link` creates a symbolic link into global **_node_modules_** that points to **_dist/my-lib-mono_** 
+

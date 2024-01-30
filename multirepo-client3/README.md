@@ -1,13 +1,11 @@
-# MultirepoClient2
+# MultirepoClient3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Usage
 This is a consumer of library built in **_monorepo-client1-and-lib_** project.
 
-Library referenced via **_tsconfig.json_** 'paths' entry that point to 'dist' of the library directly.
-
-Pre-requisite: build the library 
+Library referenced via **_tsconfig.json_** 'paths' entry that points to soflink created into local **_node_modules_** from the library with `nm link`
 
 Start: `ng serve`
 

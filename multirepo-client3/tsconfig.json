@@ -11,12 +11,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "paths": {
-      "my-lib-mono": [
-        "dist/my-lib-mono/my-lib-mono",
-        "dist/my-lib-mono"
-      ],
-    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -27,7 +21,11 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-lib-mono": ["./node_modules/my-lib-mono"],
+      "my-lib-mono/*": ["./node_modules/my-lib-mono/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
