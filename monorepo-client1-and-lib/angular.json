@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-for-my-lib-mono": {
+    "monorepo-client1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-for-my-lib-mono",
+            "outputPath": "dist/monorepo-client1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app-for-my-lib-mono:build:production"
+              "browserTarget": "monorepo-client1:build:production"
             },
             "development": {
-              "browserTarget": "app-for-my-lib-mono:build:development",
+              "browserTarget": "monorepo-client1:build:development",
               "port": 4201
             }
           },
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-for-my-lib-mono:build"
+            "browserTarget": "monorepo-client1:build"
           }
         },
         "test": {
@@ -107,23 +107,23 @@
         }
       }
     },
-    "my-lib-mono": {
+    "my-lib": {
       "projectType": "library",
-      "root": "projects/my-lib-mono",
-      "sourceRoot": "projects/my-lib-mono/src",
+      "root": "projects/my-lib",
+      "sourceRoot": "projects/my-lib/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/my-lib-mono/ng-package.json"
+            "project": "projects/my-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/my-lib-mono/tsconfig.lib.prod.json"
+              "tsConfig": "projects/my-lib/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/my-lib-mono/tsconfig.lib.json"
+              "tsConfig": "projects/my-lib/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -131,13 +131,13 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/my-lib-mono/src/test.ts",
-            "tsConfig": "projects/my-lib-mono/tsconfig.spec.json",
-            "karmaConfig": "projects/my-lib-mono/karma.conf.js"
+            "main": "projects/my-lib/src/test.ts",
+            "tsConfig": "projects/my-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/my-lib/karma.conf.js"
           }
         }
       }
     }
   },
-  "defaultProject": "app-for-my-lib-mono"
+  "defaultProject": "monorepo-client1"
 }

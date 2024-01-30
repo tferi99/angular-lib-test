@@ -1,13 +1,13 @@
 {
-  "name": "app-for-my-lib-mono",
+  "name": "monorepo-client1",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-lib": "ng build my-lib-mono",
-    "build-lib-watch": "ng build my-lib-mono --watch",
     "watch": "ng build --watch --configuration development",
+    "build-lib": "ng build my-lib",
+    "build-lib-watch": "ng build my-lib --watch",
     "test": "ng test"
   },
   "private": true,
