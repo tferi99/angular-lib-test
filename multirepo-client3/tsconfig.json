@@ -23,8 +23,8 @@
       "dom"
     ],
     "paths": {
-      "my-lib-mono": ["./node_modules/my-lib-mono"],
-      "my-lib-mono/*": ["./node_modules/my-lib-mono/*"]
+      "my-lib": ["./node_modules/my-lib"],
+      "my-lib/*": ["./node_modules/my-lib/*"]
     }
   },
   "angularCompilerOptions": {

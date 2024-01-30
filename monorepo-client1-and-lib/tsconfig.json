@@ -12,9 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "my-lib-mono": [
-        "dist/my-lib-mono/my-lib-mono",
-        "dist/my-lib-mono"
+      "my-lib": [
+        "dist/my-lib/my-lib",
+        "dist/my-lib"
       ],
     },
     "declaration": false,
