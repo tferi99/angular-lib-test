@@ -75,7 +75,8 @@
               "browserTarget": "multirepo-client3:build:production"
             },
             "development": {
-              "browserTarget": "multirepo-client3:build:development"
+              "browserTarget": "multirepo-client3:build:development",
+              "port": 4203
             }
           },
           "defaultConfiguration": "development"

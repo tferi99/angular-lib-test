@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MyLibService } from 'my-lib';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client 3 (multirepo)';
+  title = 'multirepo-client3';
   valueFromLib!: number;
-  constructor(private myLibMonoService: MyLibMonoService) {}
+  $counter!: Observable<number>;
+
+  constructor(private myLibService: MyLibService) {}
 
   ngOnInit(): void {
-    this.valueFromLib = this.myLibMonoService.getValueFromLib();
+    this.valueFromLib = this.myLibService.getValueFromLib();
+    this.$counter = this.myLibService.getCounter();
   }
 }

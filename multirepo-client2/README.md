@@ -1,15 +1,18 @@
 # MultirepoClient2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+This project demonstrates how you can consume a library from independent project (**_monorepo-client1-and-lib_**).
 
-## Usage
-This is a consumer of library built in **_monorepo-client1-and-lib_** project.
+### Pre-requisite
+Build library in **_monorepo-client1-and-lib_** project.
 
-Library referenced via **_tsconfig.json_** 'paths' entry that point to 'dist' of the library directly.
-
-Pre-requisite: build the library 
+### Usage
+Library referenced via relative **_tsconfig.json_** 'paths' entries that point to 'dist' of the external library project.
 
 Start: `ng serve`
 
 > **NOTE**: If you build the library with watch then library changes are propagated autimatically
 > and rebuild of application also triggered. 
+
+### Other scenarios
+- Try to change version number of _rxjs_ in **_package.json_** (for example to 7.5.7), to demonstrate NPM library version hell.

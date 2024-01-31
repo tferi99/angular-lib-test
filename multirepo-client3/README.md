@@ -1,13 +1,21 @@
 # MultirepoClient3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+This project demonstrates how you can consume a library from independent project (**_monorepo-client1-and-lib_**).
 
-## Usage
-This is a consumer of library built in **_monorepo-client1-and-lib_** project.
+### Pre-requisite
+- Build library in **_monorepo-client1-and-lib_** project.
+- call `npm run link` always after you called `npm install` in this project
 
-Library referenced via **_tsconfig.json_** 'paths' entry that points to soflink created into local **_node_modules_** from the library with `nm link`
+### Usage
+Library referenced via **_tsconfig.json_** 'paths' entries that points to a soflink created into local **_node_modules_** from the library with `nm link <lib-name>`
 
 Start: `ng serve`
 
-> **NOTE**: If you build the library with watch then library changes are propagated autimatically
+> **NOTE**: If you build the library with watch then library changes are propagated automatically
 > and rebuild of application also triggered. 
+
+> <font color="red">**!!!!! WARNING !!!!!**</font>
+> `npm run link` should be called always after `npm install` has been called because it deletes all dependencies that not contained by **_package.json_**.
+ 
+

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MyLibService } from 'my-lib';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,12 @@ import { MyLibService } from 'my-lib';
 export class AppComponent {
   title = 'monorepo-client1';
   valueFromLib!: number;
-  constructor(private myLibMonoService: MyLibService) {}
+  $counter!: Observable<number>;
+
+  constructor(private myLibService: MyLibService) {}
 
   ngOnInit(): void {
-    this.valueFromLib = this.myLibMonoService.getValueFromLib();
+    this.valueFromLib = this.myLibService.getValueFromLib();
+    this.$counter = this.myLibService.getCounter();
   }
 }
