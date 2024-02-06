@@ -72,7 +72,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "monorepo-client1:build:production"
+              "browserTarget": "monorepo-client1:build:production",
+              "port": 4201
             },
             "development": {
               "browserTarget": "monorepo-client1:build:development",

@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-prog": "ng serve --configuration production",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "build-lib": "ng build my-lib",

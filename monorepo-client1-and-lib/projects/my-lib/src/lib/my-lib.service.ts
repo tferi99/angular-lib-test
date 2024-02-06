@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, Optional } from '@angular/core';
 import { interval, Observable } from 'rxjs';
+import { Environment, ENVIRONMENT_TOKEN } from './my-lib.common';
 
-const VERSION: number = 1;
+const VERSION: number = 3;
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,15 @@ export class MyLibService {
 
   private counter!: Observable<number>;
 
-  constructor() { }
-    getVersion(): number {
-      return VERSION;
-    }
+  constructor(
+    @Inject(ENVIRONMENT_TOKEN) @Optional() private env: Environment
+  ) { }
 
-    getValueFromLib(): number {
+  getVersion(): number {
+    return VERSION;
+  }
+
+  getValueFromLib(): number {
     return 42;
   }
 
@@ -24,5 +28,12 @@ export class MyLibService {
       this.counter = interval(1000);
     }
     return this.counter;
+  }
+
+  getApplicationMode(): string {
+    if (!this.env) {
+      console.warn(`No token(${ENVIRONMENT_TOKEN}) provided !!!`);
+    }
+    return this.env ? this.env.mode : '?';
   }
 }
