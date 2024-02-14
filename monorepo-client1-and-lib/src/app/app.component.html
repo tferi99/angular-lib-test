@@ -4,3 +4,15 @@
 <h2>Value from lib service: {{valueFromLib}}</h2>
 <h2>Counter from lib: {{$counter | async}}</h2>
 
+<app-sizer [id]="0" [(size)]="fontSizePx"></app-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<p></p>
+
+<app-sizer [id]="1" [size]="fontSizePx2" (sizeChange)="fontSizePx2=$event"></app-sizer>
+<div [style.font-size.px]="fontSizePx2">Resizable Text</div>
+
+<lib-sizer [(size)]="fontSizePx"></lib-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+

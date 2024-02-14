@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { MyLibModule } from 'my-lib';
 import { ENVIRONMENT_TOKEN } from '../../projects/my-lib/src/lib/my-lib.common';
 import { environment } from '../environments/environment';
+import { SizerComponent } from './sizer/sizer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SizerComponent
   ],
   imports: [
     BrowserModule,

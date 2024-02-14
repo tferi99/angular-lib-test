@@ -11,6 +11,8 @@ export class AppComponent {
   title = 'monorepo-client1';
   valueFromLib!: number;
   $counter!: Observable<number>;
+  fontSizePx = 16;
+  fontSizePx2 = this.fontSizePx;
 
   constructor(private myLibService: MyLibService) {}
 

@@ -3,3 +3,12 @@
 
 <h2>Value from lib service: {{valueFromLib}}</h2>
 <h2>Counter from lib: {{$counter | async}}</h2>
+
+<p></p>
+
+<lib-sizer [(size)]="fontSizePx"></lib-sizer>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<p></p>
+
+<lib-emitter (onEmit)="onEmit($event)"></lib-emitter>
