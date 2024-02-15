@@ -26,10 +26,8 @@
       /* ############# this should be added to fix this: https://github.com/angular/angular/issues/35586 ############# */
       "@angular/*": ["./node_modules/@angular/*"],
 
-      "my-lib": [
-        "../monorepo-client1-and-lib/dist/my-lib/my-lib",
-        "../monorepo-client1-and-lib/dist/my-lib"
-      ]
+      "@my-lib": ["../monorepo-client1-and-lib/projects/my-lib/src"],
+      "@my-lib/*": ["../monorepo-client1-and-lib/projects/my-lib/src/*"]
     }
   },
   "angularCompilerOptions": {

@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./emitter.component.css']
 })
 export class EmitterComponent {
+  @Input() id!: number | string;
   @Output() onEmit = new EventEmitter<string>();
 
   data = 'default';

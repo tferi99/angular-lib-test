@@ -72,7 +72,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "multirepo-client3:build:production"
+              "browserTarget": "multirepo-client3:build:production",
+              "port": 4203
             },
             "development": {
               "browserTarget": "multirepo-client3:build:development",

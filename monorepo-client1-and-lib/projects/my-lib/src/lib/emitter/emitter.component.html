@@ -1,2 +1,5 @@
-<input [value]="data" (change)="dataChanged($event)">
-<button (click)="emit()">Emit</button>
+<div class="emitter">
+  <h3>lib-emitter[{{id}}]</h3>
+  <input [value]="data" (change)="dataChanged($event)">
+  <button class="emitter-button" (click)="emit()">Emit</button>
+</div>

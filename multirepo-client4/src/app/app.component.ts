@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MyLibService } from '@my-lib';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'multirepo-client4';
+  valueFromLib!: number;
+  $counter!: Observable<number>;
+
+  constructor(private myLibService: MyLibService) {}
+
+  ngOnInit(): void {
+    this.valueFromLib = this.myLibService.getValueFromLib();
+    this.$counter = this.myLibService.getCounter();
+  }
 }

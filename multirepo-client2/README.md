@@ -1,7 +1,6 @@
-# MultirepoClient2
+# multirepo-client2
 ###### tsconfig paths relative from external project 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 This project demonstrates how you can consume a library from independent project (**_monorepo-client1-and-lib_**).
 
 ### Pre-requisite
@@ -16,5 +15,5 @@ Start: `ng serve`
 > and rebuild of application also triggered. 
 
 ### Other scenarios
-- Try to change version number of _rxjs_ in **_package.json_** (for example to 7.5.7), to demonstrate NPM library version hell.
+- Try to change version number of _rxjs_ in **_package.json_** to demonstrate NPM library version hell.
 

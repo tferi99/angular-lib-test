@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyLibService } from 'my-lib';
+import { MyLibService } from '@my-lib';
 import { Observable } from 'rxjs';
 
 @Component({

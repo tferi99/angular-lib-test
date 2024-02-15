@@ -1,7 +1,7 @@
-# MultirepoClient3
-###### 'npm link' + tsconfig paths to node_modules
+# multirepo-client3
+###### 'npm link' + tsconfig paths to local node_modules
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 This project demonstrates how you can consume a library from independent project (**_monorepo-client1-and-lib_**).
 
 ### Pre-requisite
