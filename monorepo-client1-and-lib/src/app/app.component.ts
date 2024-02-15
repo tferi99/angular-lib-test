@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { MyLibService } from '@my-lib';
 import { Observable } from 'rxjs';
 
@@ -13,6 +13,7 @@ export class AppComponent {
   $counter!: Observable<number>;
   fontSizePx = 16;
   fontSizePx2 = this.fontSizePx;
+  version = VERSION;
 
   constructor(private myLibService: MyLibService) {}
 

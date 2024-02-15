@@ -16,18 +16,21 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2020",
+      "ES2022",
       "dom"
     ],
     "paths": {
       /* ############# this should be added to fix this: https://github.com/angular/angular/issues/35586 ############# */
       "@angular/*": ["./node_modules/@angular/*"],
 
-      "@my-lib": ["../monorepo-client1-and-lib/projects/my-lib/src"],
-      "@my-lib/*": ["../monorepo-client1-and-lib/projects/my-lib/src/*"]
+      "@my-lib": [
+        "../monorepo-client1-and-lib/dist/my-lib/my-lib",
+        "../monorepo-client1-and-lib/dist/my-lib"
+      ]
     }
   },
   "angularCompilerOptions": {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 import { MyLibService } from '@my-lib';
 import { Observable } from 'rxjs';
 
@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   valueFromLib!: number;
   $counter!: Observable<number>;
   fontSizePx = 16;
+  version = VERSION;
 
   constructor(private myLibService: MyLibService) {}
 
