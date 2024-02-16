@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 import { MyLibService } from '@my-lib';
 import { Observable } from 'rxjs';
 
@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'multirepo-client4';
   valueFromLib!: number;
   $counter!: Observable<number>;
+  version = VERSION;
 
   constructor(private myLibService: MyLibService) {}
 
