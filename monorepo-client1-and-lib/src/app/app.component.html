@@ -1,5 +1,6 @@
 <h1>{{ title }} <small>(Angular {{ version.full }})</small></h1>
 
+
 <lib-my-lib></lib-my-lib>
 <h2>Value from lib service: {{valueFromLib}}</h2>
 <h2>Counter from lib: {{$counter | async}}</h2>
@@ -15,4 +16,6 @@
 <lib-sizer [id]="0" [(size)]="fontSizePx"></lib-sizer>
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
 
+<p></p>
 
+<h3>UUID from lib: {{uuid}}</h3>

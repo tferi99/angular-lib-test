@@ -1,6 +1,7 @@
 import { Inject, Injectable, Optional } from '@angular/core';
 import { interval, Observable } from 'rxjs';
 import { Environment, ENVIRONMENT_TOKEN } from './my-lib.common';
+import { v4 as uuidv4 } from 'uuid';
 
 const VERSION: number = 3;
 
@@ -35,5 +36,9 @@ export class MyLibService {
       console.warn(`No token(${ENVIRONMENT_TOKEN}) provided !!!`);
     }
     return this.env ? this.env.mode : '?';
+  }
+
+  generateUUID(): string {
+    return uuidv4();
   }
 }

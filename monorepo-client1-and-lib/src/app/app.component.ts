@@ -14,11 +14,14 @@ export class AppComponent {
   fontSizePx = 16;
   fontSizePx2 = this.fontSizePx;
   version = VERSION;
+  uuid!: string;
 
   constructor(private myLibService: MyLibService) {}
 
   ngOnInit(): void {
     this.valueFromLib = this.myLibService.getValueFromLib();
     this.$counter = this.myLibService.getCounter();
+
+    this.uuid = this.myLibService.generateUUID();
   }
 }
