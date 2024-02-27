@@ -9,6 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "build-lib": "ng build my-lib",
     "watch-lib": "ng build my-lib --watch",
+    "build-other-lib": "ng build @dev/my-other-lib",
+    "watch-other-lib": "ng build @dev/my-other-lib --watch",
     "test": "ng test",
     "link": "npm link ./dist/my-lib"
   },
