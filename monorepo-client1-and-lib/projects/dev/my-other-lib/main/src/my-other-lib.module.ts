@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MyOtherLibComponent } from './my-other-lib.component';
-
-
+import { MyOtherLibComponent } from './my-other-lib/my-other-lib.component';
 
 @NgModule({
   declarations: [

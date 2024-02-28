@@ -1,9 +1,23 @@
 <h1>{{ title }} <small>(Angular {{ version.full }})</small></h1>
 
+<table>
+  <tr style="vertical-align: top">
+    <td><lib-my-lib></lib-my-lib></td>
+    <td style="width: 100px"></td>
+    <td><lib-my-other-lib></lib-my-other-lib></td>
+  </tr>
+  <tr style="vertical-align: top">
+    <td>
+      <h2>Value from lib service: {{valueFromLib}}</h2>
+      <h2>Counter from lib: {{$counter | async}}</h2>
+    </td>
+    <td></td>
+    <td>
+      <h2>Value from other lib service: {{valueFromOtherLib}}</h2>
+    </td>
+  </tr>
+</table>
 
-<lib-my-lib></lib-my-lib>
-<h2>Value from lib service: {{valueFromLib}}</h2>
-<h2>Counter from lib: {{$counter | async}}</h2>
 
 <app-sizer [id]="0" [(size)]="fontSizePx"></app-sizer>
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>

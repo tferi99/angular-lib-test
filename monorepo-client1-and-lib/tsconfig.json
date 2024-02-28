@@ -12,12 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "@dev/my-other-lib": [
-        "dist/dev/my-other-lib"
-      ],
-      "@my-lib": [
-        "dist/my-lib"
-      ]
+      "@dev/my-other-lib": ["dist/dev/my-other-lib"],
+      "@my-lib": ["dist/my-lib"]
     },
     "declaration": false,
     "downlevelIteration": true,

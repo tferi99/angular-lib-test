@@ -3,7 +3,26 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@env/*": ["./src/environments/*"],
+
+      "@my-lib": ["./dist/my-lib"],
+      "@dev/my-other-lib/main": ["./dist/dev/my-other-lib/main"],
+      "@dev/my-other-lib/common": ["./dist/dev/my-other-lib/common"],
+      /*
+      "@my-lib": ["./dist/my-lib"],
+      "@dev/my-other-lib/main": ["./dist/dev/my-other-lib/main"],
+      "@dev/my-other-lib/common": ["./dist/dev/my-other-lib/common"],
+
+      "@my-lib": ["./projects/my-lib/src"],
+      "@my-lib/*": ["./projects/my-lib/src/*"],
+      "@dev/my-other-lib/main": ["./projects/dev/my-other-lib/main/src"],
+      "@dev/my-other-lib/main/*": ["./projects/dev/my-other-lib/main/src/*"],
+      "@dev/my-other-lib/common": ["./projects/dev/my-other-lib/common/src"],
+      "@dev/my-other-lib/common/*": ["./projects/dev/my-other-lib/common/src/*"],
+      */
+    },
   },
   "files": [
     "src/main.ts"
