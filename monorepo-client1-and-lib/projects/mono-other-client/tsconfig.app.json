@@ -4,16 +4,17 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
     "types": [],
-/*    "paths": {
-      "@env-other/*": ["./src/environments/*"],
+    "paths": {
+      "@env-OTHER/*": ["./src/environments/*"],
 
-      "@my-lib_OTHER": ["../../dist/my-lib"],
-      "@dev/my-other-lib/main_OTHER": ["../../dist/dev/my-other-lib/main"],
-      "@dev/my-other-lib/common_OTHER": ["../../dist/dev/my-other-lib/common"]
-    }*/
+      "@my-lib-OTHER": ["../../dist/my-lib"],
+      "@dev/my-other-lib/main-OTHER": ["../../dist/dev/my-other-lib/main"],
+      "@dev/my-other-lib/common-OTHER": ["../../dist/dev/my-other-lib/common"]
+    }
   },
   "files": [
     "src/main.ts"
+//    "environments/environment.ts"
   ],
   "include": [
     "src/**/*.d.ts"

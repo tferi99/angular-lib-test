@@ -5,14 +5,13 @@
     "outDir": "./out-tsc/app",
     "types": [],
 
-      // not recognized here - only from tsconfig.json in root
-/*    "paths": {
+    "paths": {
       "@env/*": ["./src/environments/*"],
 
       "@my-lib": ["./dist/my-lib"],
       "@dev/my-other-lib/main": ["./dist/dev/my-other-lib/main"],
       "@dev/my-other-lib/common": ["./dist/dev/my-other-lib/common"],
-    },*/
+    },
   },
   "files": [
     "src/main.ts"
