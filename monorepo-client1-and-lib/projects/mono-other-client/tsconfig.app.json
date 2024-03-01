@@ -2,15 +2,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "src",
     "outDir": "../../out-tsc/app",
     "types": [],
-/*    "paths": {
-      "@env-OTHER/*": ["./src/environments/*"],
+    "paths": {
+      "@env/*": ["./src/environments/*"],
 
-      "@my-lib-OTHER": ["../../dist/my-lib"],
-      "@dev/my-other-lib/main-OTHER": ["../../dist/dev/my-other-lib/main"],
-      "@dev/my-other-lib/common-OTHER": ["../../dist/dev/my-other-lib/common"]
-    }*/
+      "@my-lib": ["../../dist/my-lib"],
+      "@dev/my-other-lib/main": ["../../dist/dev/my-other-lib/main"],
+      "@dev/my-other-lib/common": ["../../dist/dev/my-other-lib/common"],
+    }
   },
   "files": [
     "src/main.ts"

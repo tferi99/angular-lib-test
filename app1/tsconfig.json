@@ -22,15 +22,7 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
-/*    "paths": {
-      "@env/*": ["./src/environments/*"],
-
-      "@my-lib": ["./dist/my-lib"],
-      "@dev/my-other-lib/main": ["./dist/dev/my-other-lib/main"],
-      "@dev/my-other-lib/common": ["./dist/dev/my-other-lib/common"]
-    },*/
-    "traceResolution": true
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
