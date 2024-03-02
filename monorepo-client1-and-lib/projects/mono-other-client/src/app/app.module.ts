@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { MyLibModule, ENVIRONMENT_TOKEN } from '@my-lib';
 import { OtherLibDiagnosticsModule } from '@dev/my-other-lib/common';
-import { environment } from '@env/environment.development';
+import { environment } from '@env/environment';
 import { MyOtherLibModule } from '@dev/my-other-lib/main';
 
 @NgModule({
