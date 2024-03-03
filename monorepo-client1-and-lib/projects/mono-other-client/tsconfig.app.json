@@ -2,7 +2,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    /*
+     * To relocate baseUrl to the current directory.
+     * Very important, because paths aliases are relative to baseUrl.
+     *
+     * This way every paramater (include, exclude, files, paths) are relative to current directory
+     * and maintenance is more simple.
+     */
+    "baseUrl": "./",
+
     "outDir": "../../out-tsc/app",
     "types": [],
     "paths": {
@@ -10,8 +18,9 @@
 
       "@my-lib": ["../../dist/my-lib"],
       "@dev/my-other-lib/main": ["../../dist/dev/my-other-lib/main"],
-      "@dev/my-other-lib/common": ["../../dist/dev/my-other-lib/common"],
-    }
+      "@dev/my-other-lib/common": ["../../dist/dev/my-other-lib/common"]
+    },
+    "traceResolution": true
   },
   "files": [
     "src/main.ts"
