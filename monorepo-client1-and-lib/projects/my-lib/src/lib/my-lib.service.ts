@@ -21,7 +21,7 @@ export class MyLibService {
   }
 
   getValueFromLib(): number {
-    return 43;
+    return 45;
   }
 
   getCounter(): Observable<number> {

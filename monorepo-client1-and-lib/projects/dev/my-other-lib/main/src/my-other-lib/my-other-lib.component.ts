@@ -7,7 +7,9 @@ import { MyOtherLibService } from '../my-other-lib.service';
   styleUrls: ['./my-other-lib.component.css']
 })
 export class MyOtherLibComponent {
-  constructor(public myOtherLibService: MyOtherLibService) {}
+  constructor(
+    public myOtherLibService: MyOtherLibService
+  ) {}
 
   dumpAppMode(): void {
     console.log('ApplicationMode: ' + this.myOtherLibService.getApplicationMode());

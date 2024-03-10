@@ -5,8 +5,7 @@ import { Environment, ENVIRONMENT_TOKEN } from '../my-lib.common';
 @Component({
   selector: 'lib-my-lib',
   templateUrl: './my-lib.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class MyLibComponent implements OnInit {
 

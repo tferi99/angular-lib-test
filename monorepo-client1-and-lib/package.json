@@ -9,6 +9,7 @@
     "watch": "ng build --watch --configuration development",
 
     "start-other": "ng serve mono-other-client",
+    "build-other": "ng build mono-other-client",
 
     "build-lib": "ng build my-lib",
     "watch-lib": "ng build my-lib --watch",
