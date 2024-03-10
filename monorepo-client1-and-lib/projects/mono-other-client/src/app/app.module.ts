@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MyLibModule, ENVIRONMENT_TOKEN } from '@my-lib';
-import { OtherLibDiagnosticsModule } from '@dev/my-other-lib/common';
+//import { OtherLibDiagnosticsModule } from '@dev/my-other-lib/common';
 import { environment } from '@env/environment.development';
+import { OtherLibDiagnosticsModule } from '@dev/my-other-lib/common';
 
 @NgModule({
   declarations: [
