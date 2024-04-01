@@ -20,7 +20,7 @@
       "@dev/my-other-lib/main": ["../../dist/dev/my-other-lib/main"],
       "@dev/my-other-lib/common": ["../../dist/dev/my-other-lib/common"]
     },
-    "traceResolution": true
+    //"traceResolution": true
   },
   "files": [
     "src/main.ts"

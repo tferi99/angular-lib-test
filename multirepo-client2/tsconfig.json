@@ -30,7 +30,7 @@
       "@my-lib/*": ["../monorepo-client1-and-lib/dist/my-lib/*"],
       "@my-lib": ["../monorepo-client1-and-lib/dist/my-lib"]
     },
-    "traceResolution": true
+    //"traceResolution": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

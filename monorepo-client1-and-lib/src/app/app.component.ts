@@ -17,6 +17,7 @@ export class AppComponent {
   fontSizePx2 = this.fontSizePx;
   version = VERSION;
   uuid!: string;
+  testString = 'test';
 
   constructor(
     private myLibService: MyLibService,

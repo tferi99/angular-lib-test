@@ -13,12 +13,15 @@ export class AppComponent implements OnInit {
   $counter!: Observable<number>;
   fontSizePx = 16;
   version = VERSION;
+  uuid!: string;
+  testString = 'test2';
 
   constructor(private myLibService: MyLibService) {}
 
   ngOnInit(): void {
     this.valueFromLib = this.myLibService.getValueFromLib();
     this.$counter = this.myLibService.getCounter();
+    this.uuid = this.myLibService.generateUUID();
   }
 
   onEmit(ev: string) {
