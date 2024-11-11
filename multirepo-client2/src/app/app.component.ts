@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   uuid!: string;
   testString = 'test2';
 
-  constructor(private myLibService: MyLibService) {}
+  constructor(protected myLibService: MyLibService) {}
 
   ngOnInit(): void {
     this.valueFromLib = this.myLibService.getValueFromLib();

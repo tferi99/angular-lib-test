@@ -4,8 +4,11 @@
 This project demonstrates how you can consume a library from independent project (**_monorepo-client1-and-lib_**).
 
 ### Pre-requisite
-Build library in **_monorepo-client1-and-lib_** project.
-
+- Build library in **_monorepo-client1-and-lib_** project.
+- call `mk_lib_links.bat` as Administrator
+  >It required by WebStorm to pull library artifact into project directory,
+  > so it can access for code assistance.
+  
 ### Usage
 Library referenced via relative **_tsconfig.json_** 'paths' entries that point to 'dist' of the external library project.
 

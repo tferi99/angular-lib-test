@@ -11,7 +11,7 @@ export class MyOtherLibService {
   ) { }
 
   getValueFromOtherLib(): number {
-    return 101;
+    return 103;
   }
 
   getApplicationMode(): string {

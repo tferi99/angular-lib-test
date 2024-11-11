@@ -3,7 +3,7 @@ import { interval, Observable } from 'rxjs';
 import { Environment, ENVIRONMENT_TOKEN } from './my-lib.common';
 import { v4 as uuidv4 } from 'uuid';
 
-const VERSION: number = 3;
+const VERSION: number = 5;
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class MyLibService {
   }
 
   getValueFromLib(): number {
-    return 45;
+    return 46;
   }
 
   getCounter(): Observable<number> {
